@@ -1,0 +1,360 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color-scheme: light dark ;   /*by this when our pc(browser) theme is dark then our page colour is light and vice versa i.e when browser theme is white and we want to give backfround colour black then it automaticaly gives*/
+}
+html{
+    font-size: 62%;
+}
+body{
+    margin: 0;
+    /* min-width: 32rem; */
+    min-height: 100vh;
+}
+h1{
+    font-size: 4.2rem;
+    line-height: 1.1;
+    font-weight: bold;
+}
+li{
+    list-style: none;
+}
+p,li,input,textarea{
+    font-size: 1.8rem;
+    line-height: 1.56;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.06rem;
+}
+a{
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: #646cff
+}
+
+.toastBody{                       /*this is class of toast used*/
+    font-family:"atlas Grotesk Web",Arial,Helvetica,sans-serif;
+    /* color: #10171D ;      */
+    font-size: 1.7rem;
+}
+
+.uppersection{
+    max-width:140rem;
+    padding: 4rem 2rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.upper_container,.imagecontainer{
+    width: 40%;
+    margin: auto 30px;
+    
+}
+.imagecontainer{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    
+}
+.imagecontainer>img{
+    width: 70%;
+    height: auto;
+}
+button{
+    text-transform: capitalize;    /*by this first letter become capital*/
+    padding: 1rem 2.2rem;
+    font-size: 1.7rem;
+    font-weight: 500;
+    background-color: #646cff;
+    border-radius: 0.8rem;
+    border: 0.1rem solid transparent;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+.secondbtn{
+    background-color: transparent;       /*by this our background color blue will invisible i.e button become transparent*/
+    box-shadow: inset 0 0 0 0.2rem #646cff; 
+    margin-left: 3.2rem;
+}
+button:hover{
+    /* border: 0.2rem solid #fff; */
+    box-shadow: inset 0 0 0 0.2rem #fff;    /*by above line when we hover on button then border become white but oter content move(disturbed) so we use this box shadow and by insite border becomes inside the button*/
+}
+.content>p{
+    margin: 2.4rem 0 4.8rem 0;
+}
+.content>p:first-child{
+    margin: 0 0 1.2rem 0;     /*here we reduce the bottom margin of 1st p of content box by 4.8 to 1.2 */
+}
+.midsection{
+    margin: 9.6rem 18.2rem;
+    /* display: flex; */
+    /* justify-content: center; */
+}
+.grid{
+    display: grid;
+    gap: 6.4rem;
+    /* display: flex;
+    justify-content: space-evenly; */
+}
+.grid-four-column{
+    grid-template-columns: repeat(4, 1fr);
+}
+.midsection>.container{
+    background-color: #fff;
+    border-radius: 1rem;
+    color: #242424;
+}
+.div1{
+    text-align: center;
+    border-right: 0.2rem solid #242424;
+}
+.div1:last-child{
+    border: none;
+}
+.div1>h2{
+    font-size: 1.8rem;
+}
+.div1>p{
+    text-transform: capitalize;
+}
+
+
+
+
+.registration_container{
+    max-width:140rem;
+    padding: 4rem 2rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* common for registration login  contact us page upto next comment*/
+.img_container,.form_container{
+    width: 40%;
+    /* margin: auto 30px; */
+}
+
+.img_container{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+}
+.img_container>img{
+    width: 80%;
+    height: auto;
+}
+
+label{
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+    text-transform: capitalize;
+}
+/* .form_container div{
+    margin-bottom: 12px;
+} */
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+form {
+    & input,textarea{
+    width: 80%;
+    padding: 0.2rem 0.6rem;
+}
+}
+/* common for registration login  contact us page upto next comment*/
+
+
+
+
+.login_container{
+    max-width:140rem;
+    padding: 4rem 2rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+
+.contact_container{
+    max-width:140rem;
+    padding: 4rem 2rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+
+#error-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content{
+    max-width: 70rem;
+    text-align: center;
+}
+.content h2{
+    font-size: 18vh;
+    background: -webkit-linear-gradient(
+        -60deg,
+        #71b7e6,
+        #646cff,
+        #b98acc,
+        #ee8176,
+        #b98acc,
+        #646cff,
+        #9b59b6
+    );
+    background-size: 500%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.25);
+    position: relative;
+    -webkit-animation: animate 5s ease-in-out infinite;
+}
+@keyframes animate {
+    0%{
+        background-position: 0 0;
+    }
+    25%{
+        background-position: 100% 0;
+    }
+    50%{
+        background-position: 100% 100%;
+    }
+    75%{
+        background-position: 0 100%;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+.btns{
+    display: flex;
+    justify-content: center;
+
+}
+.btns div{
+    text-transform: capitalize;    /*by this first letter become capital*/
+    padding: 1rem 2.2rem;
+    font-size: 1.7rem;
+    font-weight: 500;
+    border-radius: 0.8rem;
+    border: 0.1rem solid #fff;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    transition: border-color 0.3s;
+    margin: 2rem;
+}
+.content h4{
+    font-size: 2rem;
+}
+
+
+
+.grid-two-cols{
+    /* display: grid; */
+    grid-template-columns: auto auto;
+    /* gap: 50px; */
+    gap: 5.1rem;
+    margin-bottom: 2rem 
+}
+.grid-three-cols{
+    display: grid;
+    /* border: 2px solid #fff;
+    width: fit-content;
+    margin: 3rem  */
+    grid-template-columns: auto auto auto;
+}
+.card{
+    width: 100%;
+    padding: 1.2rem;
+    border: 2px solid #fff;
+    width: fit-content;
+    margin: 3rem 
+}
+.card_details{
+    width: 100%;
+}
+.card_details h2{
+    margin-bottom: 2rem;
+}
+.card_img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem
+}
+
+.admin-users{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+table{
+
+    background: #fff;
+    box-shadow: rgba(255, 255, 255, 0.25) 0px 7px 29px 0px;
+    border-collapse: collapse;
+    border-radius: 1rem;
+    max-width: 115rem;
+    /* width: 100%; */
+}
+th{
+    font-size: 1.7rem;
+    letter-spacing: 0.1rem;
+    padding: 3rem;
+    text-align: center;
+    color: #242424;
+    width: 30rem;
+}
+td{
+    font-size: 1.7rem;
+    letter-spacing: 0.1rem;
+    padding: 3rem;
+    text-align: center;
+    color: #242424;
+    width: 30rem;
+    /* width: 20rem; */
+}
+
+tr{
+    display: grid;
+    grid-template-columns: repeat(5,minmax(10rem,1fr));
+    align-items: center;
+    box-shadow: 0 0.3rem 0 grey;
+    margin-bottom: 10px;
+    border-bottom: 4px solid transparent;
+    color:#242424;
+    word-wrap: break-word; /* Wrap the content within the cell */
+    /* overflow: auto; */
+}
+tr:last-child{
+    box-shadow: none;
+}
+
+.admin-contact{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+.admin-contact tr{
+    display: grid;
+    grid-template-columns: repeat(4,minmax(10rem,1fr));
+    align-items: center;
+    box-shadow: 0 0.3rem 0 grey;
+    margin-bottom: 10px;
+    border-bottom: 4px solid transparent;
+    color:#242424;
+    word-wrap: break-word; /* Wrap the content within the cell */
+    /* overflow: auto; */
+}
+.admin-contact tr:last-child{
+    box-shadow: none;
+}

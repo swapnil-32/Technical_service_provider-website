@@ -1,0 +1,58 @@
+to create frontend folder like here client we use 
+   npm create vite@latest   it will ask for name give name and then folder will create
+   refer https://vitejs.dev/guide/
+   and to run this react(vite) app we need to cd folder and then npm run dev
+
+here we use vite for frontend
+it  is a build tool that aims to provide a faster and leaner development experience for modern web projects. It consists of two major parts:
+
+   1.A dev server that provides rich feature enhancements over native ES modules, for example extremely fast Hot Module Replacement (HMR).
+
+   2.A build command that bundles your code with Rollup, pre-configured to output highly optimized static assets for production.
+
+we used the package react-router-dom which helps in rendaring of different routes see in App.jsx file
+refer https://www.npmjs.com/package/react-router-dom   and https://reactrouter.com/en/main/router-components/browser-router
+
+
+
+connect frontend with backend:
+we use fetch or axioms method
+in postman we manualy pass the data by clicking the body
+in postman we use url then we select http method(like get,post) and then we give data
+now same thing we can do with frontend so for connect we use fetch method
+fetch method returns the promise so we need to use .then or we can use async await
+after run the code it give CORS policy.browser give this error it means server port and frontend port must same port(domain)  express port(domain) and react port(domain)
+so to resolve this issue we use cors module(package) it used as middlewre it tells that this this port is our frontend part
+make sure that we install it in backend(server) folder
+we use cors middleware in index.js file in backend folder
+
+if user register or login token is generated we need to save it either local storage or cookies to authenticate that actualy(real) it is user
+here we use browser loacl storage to store (click inspect and go to application.application present upper navbar of inspect) and there we can see local storage
+
+
+
+parent component->childA component->childB component->childC component so if we want to some data from parent component to childCnthen we pass throgh childA then to childB and then child c.so is it possible to pass data direct fro parent to childC.so answer is yes we use context api
+React context api allow you to easily access data from different levels of component tree without pass the props to every level
+
+for data flow from parent to its child we used context api
+so in this we need to first create context 
+then we need provider (kind of function) used to provide(pass) data(context) to its descendants(childrens)
+and third part is consumer so whwn someone want to consume data then they need to become consumer
+
+we wrap the main app by this provider so that any component those want to data they can get by this context api
+and for logout function we define it in context api i.e in auth.jsx
+
+npm i react-toastify we install this in client this give modern touch i.e instead of normal alert pop up in browser it pop up alert in modern style
+and we import Tostcontainer im main.jsx becouse any page can access it 
+and at whicheve page you need tostify import there as  import { toast } from 'react-toastify';along with importing toast we also need to import css of it otherwise toast is visible anywhere with improper styling
+and use it
+alert()=toast()
+if we use toast for error then use like toast.error() instead of toast
+for any thange in css of toast we can add css in <Toastcontainer/> 
+https://fkhadra.github.io/react-toastify/introduction/   refer this side
+
+we used the icons from react icon and for this we need to install it npm i react-icons
+then go to its documentation click on the icon that is required there we get import statement copy it paste where we need and for use it simply use as component ex.import { FaUserAlt } from "react-icons/fa";   and use as <FaUserAlt />
+
+
+if user is not admin then automatically rrdirect to home page see admin-Layout file

@@ -1,0 +1,11 @@
+Zod package:used for validation
+
+defualt error middleware:
+we can handle all errors in single file and then we send it to front end
+so instead of sending response from server like res.send(error) we send it from middleware like next(err)
+
+
+
+we create route of admin in routes folder and its controller in controller folder
+we add authmiddleware to check that user is loged in if not then this admin users and contact is not accesssible to anyone see admin_route file
+to check this on postman without frontend then first log in in login request by giving email and password there in header feild and then copy the token generated there and paste it on admin users/contacts request header part and then send request now it willl not show error
